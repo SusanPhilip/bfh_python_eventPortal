@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up  Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+   <body>
+    {% block content %}
+    <div class="Sign-In">
+<img src="login.png">
+<h1>Sign Up</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <div class="input-group">
+    {{ form.name }}
+     <input type="text"class="input-box"placeholder="Name">
+     {{ form.semester }}
+     <input type="text"class="input-box"placeholder="Semester">
+     {{ form.mobile }}
+     <input type="text"class="input-box"placeholder="Mobile">
+     {{ form.email }}
+     <input type="email"class="input-box"placeholder="Email">
+     {{ form.password }}
+     <input type="password"class="input-box"placeholder="Password">
+     <p><span><input type="checkbox"></span>I agree to terms and condition</p>
+     <button type="Button"class="signIn-btn">Sign Up</button>
+     </div>
+    </form>
+            
+</div>
+{% endblock content %}
+</body>
+</html>
